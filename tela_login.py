@@ -16,37 +16,20 @@ class FloatApp(App):
         
         flo = FloatLayout()
         icon_login = AsyncImage(
-            source='https://img.freepik.com/fotos-premium/icone-de-usuario-padrao-feminino-para-uma-imagem-de-perfil-em-branco-em-fundo-rosa-para-icone-de-imagem-de-perfil_962764-98388.jpg',
-            pos=(550, 650),
-            size_hint= (.4, .3)
-            )
-
+            source='https://cdn-icons-png.flaticon.com/512/5550/5550463.png',
+            pos=(590, 630),
+            size_hint= (.4, .3))
         flo.add_widget(icon_login)
-        l1 = Button(
-            text="Login", size_hint=(.2, .1),
-            pos=(350, 350), color = ('fa8fb1'), font_name='Georgia'
-        )
-
-        flo.add_widget(l1)
-
-        self.t1 = TextInput(size_hint=(.4, .1), pos=(400, 350))
+        
+        self.t1 = TextInput(text = 'Login', size_hint=(.2, .1), pos=(770, 500))
         flo.add_widget(self.t1)
-        
-        l2 = Button(
-            text="Senha", size_hint=(.2, .1),
-            pos=(200, 250),color = [1,1,1,1]
-        )
-        
-        flo.add_widget(l2)
 
-        t2 = TextInput(
-            multiline=True, size_hint=(.4, .1), pos=(400, 250)
-        )
+        self.t2 = TextInput(
+         text = 'Senha' , multiline=True, size_hint=(.2, .1), pos=(770, 350))
+        flo.add_widget(self.t2)
 
-        flo.add_widget(t2)
-        
         b1 = Button(
-            text='Entrar', size_hint = (.2, .1),
+            text='Entrar', size_hint = (.2, 0.1),
             pos_hint = {'center_x':.5, 'center_y':.07},
             on_press = self.entrar
         )
